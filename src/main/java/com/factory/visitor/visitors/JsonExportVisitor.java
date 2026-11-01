@@ -59,4 +59,9 @@ public class JsonExportVisitor implements FactoryVisitor<String> {
     public String visit(ThermalSensorUnit u) {
         return String.format("%s{\"type\": \"ThermalSensorUnit\", \"id\": \"%s\"}", pad(), u.getId());
     }
+
+    @Override
+    public String visit(AgvForklift agv) {
+        return String.format("%s{\"type\": \"AgvForklift\", \"id\": \"%s\"}", pad(), agv.getId());
+    }
 }

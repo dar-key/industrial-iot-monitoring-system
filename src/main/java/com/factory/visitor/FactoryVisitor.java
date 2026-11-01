@@ -15,4 +15,5 @@ public interface FactoryVisitor<R> {
 
     R visit(ThermalSensorUnit sensor);
 
+    R visit(AgvForklift agv);
 }

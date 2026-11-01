@@ -38,6 +38,11 @@ public class OperationalFilterVisitor implements FactoryVisitor<List<FactoryElem
         return List.of(u);
     }
 
+    @Override
+    public List<FactoryElement> visit(AgvForklift agv) {
+        return List.of(agv);
+    }
+
     private List<FactoryElement> collect(Iterable<FactoryElement> children) {
         List<FactoryElement> result = new ArrayList<>();
         children.forEach(c -> result.addAll(c.accept(this)));

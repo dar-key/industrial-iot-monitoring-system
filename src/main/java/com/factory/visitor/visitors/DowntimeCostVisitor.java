@@ -33,4 +33,9 @@ public class DowntimeCostVisitor implements FactoryVisitor<Double> {
     public Double visit(ThermalSensorUnit u) {
         return u.getHourlyDowntimeCost();
     }
+
+    @Override
+    public Double visit(AgvForklift agv) {
+        return 120.0;
+    }
 }

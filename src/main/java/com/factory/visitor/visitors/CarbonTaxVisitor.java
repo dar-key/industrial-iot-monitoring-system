@@ -33,4 +33,9 @@ public class CarbonTaxVisitor implements FactoryVisitor<Double> {
     public Double visit(ThermalSensorUnit u) {
         return 1.0;
     }
+
+    @Override
+    public Double visit(AgvForklift agv) {
+        return 8.0;
+    }
 }

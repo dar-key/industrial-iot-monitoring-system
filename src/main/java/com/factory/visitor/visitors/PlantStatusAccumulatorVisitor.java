@@ -42,6 +42,11 @@ public class PlantStatusAccumulatorVisitor implements FactoryVisitor<PlantStatus
         return new PlantSummary(1, 0, 1);
     }
 
+    @Override
+    public PlantSummary visit(AgvForklift agv) {
+        return new PlantSummary(1, 0, 0);
+    }
+
     private PlantSummary aggregate(Iterable<FactoryElement> children) {
         PlantSummary total = new PlantSummary(0, 0, 0);
         for (FactoryElement e : children)
